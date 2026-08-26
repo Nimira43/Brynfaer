@@ -1,0 +1,56 @@
+############################
+# .NET / ASP.NET Core
+############################
+
+# Build outputs
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userprefs
+
+# IDE-specific
+.vs/
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Publish output
+publish/
+dist/
+
+# Entity Framework
+Migrations/
+
+# Cache / DB
+*.db
+*.db-shm
+*.db-wal
+appsettings.json
+appsettingsDevelopment.json
+
+############################
+# React / Node
+############################
+
+# Node modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Environment files
+.env
+.env.local
+.env.development
