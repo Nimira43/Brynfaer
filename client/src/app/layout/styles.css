@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+
+:root {
+  --font-main: 'Poppins', sans-serif;
+  --font-logo: 'Bitcount Grid Double', system-ui;
+  --prime-main: #00bfa6;
+  --prime-dark: #008c78;
+  --prime-light: #5fffeb;
+}
+
+body {
+  font-family: var(--font-main);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400
+}
+
+button {
+  font-family: var(--font-main) !important;
+}
+
+.testing-colour {
+  color: #ff6f61;
+  color: #cc4f45;
+  color: #ff9a8f;
+}
+
+.logo-font {
+  font-family: var(--font-logo);
+}
+
+.prime-main {
+  color: var(--prime-main);
+}
+
+.prime-dark {
+  color: var(--prime-dark);
+}
+
+.prime-light {
+  color: var(--prime-light);
+}
+
+.bg-prime-main {
+  background-color: var(--prime-main);
+}
+
+.bg-prime-dark {
+  background-color: var(--prime-dark);
+}
+
+.bg-prime-light {
+  background-color: var(--prime-light);
+}
+
+.border-prime-main {
+  border-color: var(--prime-main);
+}
+
+.border-prime-dark {
+  border-color: var(--prime-dark);
+}
+
+.border-prime-light {
+  border-color: var(--prime-light);
+}
+
+.transitioning {
+  transition: all 0.5s ease-in-out;
+}
