@@ -1,5 +1,8 @@
 import { createTheme } from '@mui/material/styles'
 
+export const darkMode = false
+const palleteType = darkMode ? 'dark' : 'light'
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -13,6 +16,12 @@ const theme = createTheme({
       dark: '#cc4f45',
       light: '#ff9a8f',
       contrastText: '#fff'
+    },
+    mode: palleteType,
+    background: {
+      default: (palleteType === 'light')
+        ? '#eaeaea'
+        : '#111111'
     }
   },
   typography: {

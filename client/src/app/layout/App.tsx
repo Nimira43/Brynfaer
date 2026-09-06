@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import type { Product } from '../models/product'
 import Catalog from '../../features/catalog/Catalog'
-import { Box, Button, Container, Typography } from '@mui/material'
+import { Box, Container, CssBaseline, ThemeProvider } from '@mui/material'
+import NavBar from './NavBar'
+import theme, { darkMode } from '../../theme'
 
 function App() { 
   const [products, setProducts] = useState<Product[]>([])
@@ -12,46 +14,27 @@ function App() {
       .then(data => setProducts(data))
   }, [])
 
-  const addProduct = () => {
-    setProducts(
-      prevState => [
-        ...prevState,
-        {
-          id: prevState.length + 1,
-          name: 'product' + (prevState.length + 1),
-          price: (prevState.length * 100) + 100,
-          quantityInStock: 100,
-          description: 'product',
-          pictureUrl: 'https://picsum.photo/200',
-          type: 'type',
-          brand: 'brnad'
-        }
-      ]
-    )
-  }
-
   return (
-    <Container maxWidth='xl'>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <NavBar />
       <Box
-        display='flex'
-        justifyContent='center'
-        gap={3}
-        marginY={3}
+        sx={{
+          minHeight: '100vh',
+          background: darkMode
+            ? '#111111'
+            : '#eaeaea'
+        }}
+      
       >
-        <Typography variant='h4'>
-          <span className='logo-font prime-main'>
-            Brynfaer
-          </span>
-        </Typography>
-        <Button
-          variant='contained'
-          onClick={addProduct}
-          >
-          Add Product
-        </Button>
+        <Container
+          maxWidth='xl'
+          sx={{marginTop: 14}}
+          >  
+          <Catalog products={products}/>     
+        </Container>   
       </Box>
-      <Catalog products={products}/>     
-    </Container>   
+    </ThemeProvider>
   )
 }
 

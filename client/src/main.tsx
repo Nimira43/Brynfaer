@@ -2,8 +2,6 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './app/layout/styles.css'
 import App from './app/layout/App'
-import { ThemeProvider } from '@mui/material/styles'
-import theme from './theme'
 import '@fontsource/poppins/100.css'
 import '@fontsource/poppins/200.css'
 import '@fontsource/poppins/300.css'
@@ -16,8 +14,6 @@ import '@fontsource/poppins/900.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <App />
   </StrictMode>,
 )
