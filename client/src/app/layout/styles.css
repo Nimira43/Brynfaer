@@ -8,6 +8,9 @@
   --prime-light: #5fffeb;
 }
 
+* {
+  text-decoration: none;
+}
 body {
   font-family: var(--font-main);
   font-weight: 300;
@@ -30,6 +33,7 @@ button {
 .logo-font {
   font-family: var(--font-logo);
   font-weight: 400;
+  font-size: 25px;
 }
 
 .prime-main {
